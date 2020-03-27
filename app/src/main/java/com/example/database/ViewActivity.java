@@ -9,6 +9,7 @@ public class ViewActivity  extends AppCompatActivity{
 
     private TextView titleView;
     private TextView directorView;
+    private TextView yearView;
 
     @Override
         public void
@@ -18,11 +19,13 @@ public class ViewActivity  extends AppCompatActivity{
 
             titleView = findViewById(R.id.titleView);
             directorView = findViewById(R.id.directorView);
+            yearView = findViewById(R.id.yearView);
 
             DatabaseManager dbm = new DatabaseManager(this);
             String[] entry = dbm.get();
             titleView.setText(entry[0]);
             directorView.setText(entry[1]);
+            yearView.setText(entry[2]);
 
     }
 }
