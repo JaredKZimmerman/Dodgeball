@@ -15,12 +15,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void viewMovie(View v){
-        Intent i = new Intent(this, ViewActivity.class);
+        Intent i = new Intent(this, TitleViewActivity.class);
         startActivity(i);
     }
 
     public void addMovie(View v){
         Intent i = new Intent(this, AddActivity.class);
+        startActivity(i);
+    }
+
+    public void addDirector(View v){
+        Intent i = new Intent(this, DirectorActivity.class);
         startActivity(i);
     }
 

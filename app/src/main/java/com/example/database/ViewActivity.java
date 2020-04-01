@@ -1,5 +1,6 @@
 package com.example.database;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -22,7 +23,9 @@ public class ViewActivity  extends AppCompatActivity{
             yearView = findViewById(R.id.yearView);
 
             DatabaseManager dbm = new DatabaseManager(this);
-            String[] entry = dbm.get();
+            Intent i = getIntent();
+            String title = i.getStringExtra("TITLE");
+            String[] entry = dbm.get(title);
             titleView.setText(entry[0]);
             directorView.setText(entry[1]);
             yearView.setText(entry[2]);
