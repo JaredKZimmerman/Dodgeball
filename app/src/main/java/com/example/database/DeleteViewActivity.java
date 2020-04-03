@@ -1,7 +1,5 @@
 package com.example.database;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,22 +7,23 @@ import android.widget.GridLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
 
-public class DirectorViewActivity extends AppCompatActivity {
+public class DeleteViewActivity extends AppCompatActivity {
 
     private ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_director_view);
+        setContentView(R.layout.activity_delete_view);
 
         scrollView = findViewById(R.id.scrollView);
         scrollView.removeAllViewsInLayout();
         DatabaseManager dbm = new DatabaseManager(this);
-        Intent i = getIntent();
-        ArrayList<String> list = dbm.getDirector(i.getStringExtra("DIRECTOR"));
+        ArrayList<String> list = dbm.getTitles();
         GridLayout grid = new GridLayout (this);
         grid.setColumnCount(1);
         grid.setRowCount(list.size());

@@ -58,6 +58,32 @@ public class DatabaseManager extends SQLiteOpenHelper {
         return entry;
     }
 
+    public ArrayList<String> getDirector (String directorName){
+        SQLiteDatabase db = getWritableDatabase();
+        ArrayList<String> list = new ArrayList<String>();
+        String sql = "select * from MovieTable where director = '"+directorName+"'";
+        Cursor cursor = db.rawQuery(sql, null);
+        while(cursor.moveToNext()) {
+            String director = cursor.getString(1);
+            list.add(director);
+        }
+        db.close();
+        return list;
+    }
+    public ArrayList<String> getDelete (String deleteMovie){
+        SQLiteDatabase db = getWritableDatabase();
+        ArrayList<String> list = new ArrayList<String>();
+        String sql = "select * from MovieTable where delete = '"+deleteMovie+"'";
+        Cursor cursor = db.rawQuery(sql, null);
+        while(cursor.moveToNext()) {
+            String deleteThis = cursor.getString(1);
+            list.add(deleteThis);
+        }
+        delete from MovieTable where getDelete = ‘deleteMovie’;
+        db.close();
+        return list;
+    }
+
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
 
     }

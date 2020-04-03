@@ -7,24 +7,24 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class DirectorActivity  extends AppCompatActivity {
+public class DeleteActivity  extends AppCompatActivity {
 
     public EditText searchBar;
 
     @Override
     public void
     onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);setContentView(R.layout.activity_director);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_delete);
 
         searchBar = findViewById(R.id.searchBar);
 
     }
 
-    public void searchDB(View v){
-        Intent i = new Intent(this, DirectorViewActivity.class);
-        String director = searchBar.getText().toString();
-        i.putExtra("DIRECTOR", director);
+    public void deleteMovie (View v){
+        Intent i = new Intent(this, DeleteViewActivity.class);
+        String delete = searchBar.getText().toString();
+        i.putExtra("DELETE", delete);
         startActivity(i);
     }
-
 }

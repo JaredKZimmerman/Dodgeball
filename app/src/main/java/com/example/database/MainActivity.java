@@ -28,5 +28,9 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, DirectorActivity.class);
         startActivity(i);
     }
+    public void deleteMovie (View v){
+        Intent i = new Intent(this, DeleteActivity.class);
+        startActivity(i);
+    }
 
 }
