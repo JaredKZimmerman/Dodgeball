@@ -70,18 +70,13 @@ public class DatabaseManager extends SQLiteOpenHelper {
         db.close();
         return list;
     }
-    public ArrayList<String> getDelete (String deleteMovie){
+
+    public void delete (String deleteMovie){
         SQLiteDatabase db = getWritableDatabase();
-        ArrayList<String> list = new ArrayList<String>();
-        String sql = "select * from MovieTable where delete = '"+deleteMovie+"'";
-        Cursor cursor = db.rawQuery(sql, null);
-        while(cursor.moveToNext()) {
-            String deleteThis = cursor.getString(1);
-            list.add(deleteThis);
-        }
-        delete from MovieTable where getDelete = ‘deleteMovie’;
+        String sql = "delete * from MovieTable where title = '"+deleteMovie+"'";
+        sql += "null, '"+deleteMovie+"')";
+        db.execSQL(sql);
         db.close();
-        return list;
     }
 
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
