@@ -22,9 +22,10 @@ public class DeleteActivity  extends AppCompatActivity {
     }
 
     public void deleteMovie (View v){
-        Intent i = new Intent(this, DeleteViewActivity.class);
         String delete = searchBar.getText().toString();
-        i.putExtra("DELETE", delete);
-        startActivity(i);
+        DatabaseManager dbm = new DatabaseManager(this);
+        dbm.delete(delete);
+        finish();
+
     }
 }

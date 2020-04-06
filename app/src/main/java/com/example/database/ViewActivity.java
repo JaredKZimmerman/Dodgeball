@@ -2,6 +2,7 @@ package com.example.database;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,5 +31,14 @@ public class ViewActivity  extends AppCompatActivity{
             directorView.setText(entry[1]);
             yearView.setText(entry[2]);
 
+    }
+
+    public void editPressed(View v){
+        Intent i = new Intent(this, AddActivity.class);
+        i.putExtra("ADD", false);
+        i.putExtra("TITLE", titleView.getText().toString());
+        i.putExtra("DIRECTOR", directorView.getText().toString());
+        i.putExtra("YEAR", yearView.getText().toString());
+        startActivity(i);
     }
 }

@@ -28,6 +28,14 @@ public class DatabaseManager extends SQLiteOpenHelper {
         db.close();
     }
 
+    public void updateByTitle(String title, String director, String year){
+        SQLiteDatabase db = getWritableDatabase();
+        String sql = "update MovieTable set director = '"+director+"'";
+        sql += "where title = '"+title+"'";
+        db.execSQL(sql);
+        db.close();
+    }
+
     public ArrayList<String> getTitles(){
         ArrayList<String> list = new ArrayList<String>();
         SQLiteDatabase db = getWritableDatabase();
@@ -73,8 +81,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
 
     public void delete (String deleteMovie){
         SQLiteDatabase db = getWritableDatabase();
-        String sql = "delete * from MovieTable where title = '"+deleteMovie+"'";
-        sql += "null, '"+deleteMovie+"')";
+        String sql = "delete from MovieTable where title = '"+deleteMovie+"'";
         db.execSQL(sql);
         db.close();
     }
