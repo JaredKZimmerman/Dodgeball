@@ -14,22 +14,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void viewMovie(View v){
-        Intent i = new Intent(this, TitleViewActivity.class);
+    public void viewWrestler(View v){
+        Intent i = new Intent(this, WrestlerActivity.class);
         startActivity(i);
     }
 
-    public void addMovie(View v){
+    public void addWrestler(View v){
         Intent i = new Intent(this, AddActivity.class);
         i.putExtra("ADD", true);
         startActivity(i);
     }
 
-    public void addDirector(View v){
-        Intent i = new Intent(this, DirectorActivity.class);
+    public void addNickname(View v){
+        Intent i = new Intent(this, NicknameActivity.class);
         startActivity(i);
     }
-    public void deleteMovie (View v){
+    public void deleteWrestler (View v){
         Intent i = new Intent(this, DeleteActivity.class);
         startActivity(i);
     }

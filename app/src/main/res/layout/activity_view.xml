@@ -7,12 +7,12 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/yearView"
-        android:layout_width="136dp"
-        android:layout_height="71dp"
+        android:id="@+id/finisherView"
+        android:layout_width="401dp"
+        android:layout_height="67dp"
         android:layout_marginTop="184dp"
         android:layout_marginBottom="8dp"
-        android:text="Year"
+        android:text="Finisher"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,12 +23,12 @@
         app:layout_constraintVertical_bias="0.705" />
 
     <TextView
-        android:id="@+id/directorView"
+        android:id="@+id/nicknameView"
         android:layout_width="400dp"
         android:layout_height="54dp"
         android:layout_marginTop="184dp"
         android:layout_marginBottom="8dp"
-        android:text="Director"
+        android:text="Nickname"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -40,11 +40,11 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
+        android:layout_width="223dp"
+        android:layout_height="60dp"
         android:layout_marginTop="184dp"
         android:layout_marginBottom="8dp"
-        android:text="in"
+        android:text="wins with the"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +59,7 @@
         android:layout_height="47dp"
         android:layout_marginTop="184dp"
         android:layout_marginBottom="8dp"
-        android:text="by"
+        android:text="aka"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,12 +68,12 @@
         app:layout_constraintVertical_bias="0.174" />
 
     <TextView
-        android:id="@+id/titleView"
+        android:id="@+id/wrestlerView"
         android:layout_width="407dp"
         android:layout_height="59dp"
         android:layout_marginTop="184dp"
         android:layout_marginBottom="8dp"
-        android:text="Movie Title"
+        android:text="Wrestler Title"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -84,7 +84,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/editButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -98,6 +98,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.918"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/yearView"
+        app:layout_constraintTop_toBottomOf="@+id/finisherView"
         app:layout_constraintVertical_bias="0.466" />
 </androidx.constraintlayout.widget.ConstraintLayout>

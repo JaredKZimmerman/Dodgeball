@@ -10,78 +10,78 @@ import java.util.ArrayList;
 public class DatabaseManager extends SQLiteOpenHelper {
 
     public DatabaseManager(Context context){
-        super(context, "MoviesDB", null, 1);
+        super(context, "WrestlerDB", null, 1);
     }
 
     public void onCreate(SQLiteDatabase db){
-        String sql = "create table MovieTable(";
+        String sql = "create table WrestlerTable(";
         sql += "id integer primary key autoincrement, ";
-        sql += "title text, director text, year text)";
+        sql += "name text, nickname text, finisher text)";
         db.execSQL(sql);
     }
 
-    public void insert(String movieName, String directorName, String yearName){
+    public void insert(String wrestlerName, String nicknameName, String finisherName){
         SQLiteDatabase db = getWritableDatabase();
-        String sql = "insert into MovieTable values(";
-        sql += "null, '"+movieName+"', '"+directorName+"', '"+yearName+"')";
+        String sql = "insert into WrestlerTable values(";
+        sql += "null, '"+wrestlerName+"', '"+nicknameName+"', '"+finisherName+"')";
         db.execSQL(sql);
         db.close();
     }
 
-    public void updateByTitle(String title, String director, String year){
+    public void updateByTitle(String name, String nickname, String finisher){
         SQLiteDatabase db = getWritableDatabase();
-        String sql = "update MovieTable set director = '"+director+"'";
-        sql += "where title = '"+title+"'";
+        String sql = "update WrestlerTable set nickname = '"+nickname+"'";
+        sql += "where wrestler = '"+name+"'";
         db.execSQL(sql);
         db.close();
     }
 
-    public ArrayList<String> getTitles(){
+    public ArrayList<String> getNames(){
         ArrayList<String> list = new ArrayList<String>();
         SQLiteDatabase db = getWritableDatabase();
-        String sql = "select * from MovieTable";
+        String sql = "select * from WrestlerTable";
         Cursor cursor = db.rawQuery(sql, null);
         while(cursor.moveToNext()) {
-            String title = cursor.getString(1);
-            list.add(title);
+            String name = cursor.getString(1);
+            list.add(name);
         }
         db.close();
         return list;
     }
 
-    public String[] get(String movieTitle){
+    public String[] get(String wrestlerName){
         SQLiteDatabase db = getWritableDatabase();
-        String sql = "select * from MovieTable where title = '"+movieTitle+"'";
+        String sql = "select * from WrestlerTable where title = '"+wrestlerName+"'";
         Cursor cursor = db.rawQuery(sql, null);
         String[] entry = new String[3];
         if (cursor.moveToFirst()){
-            String title = cursor.getString(1);
-            String director = cursor.getString(2);
-            String year = cursor.getString(3);
-            entry[0] = title;
-            entry[1] = director;
-            entry[2] = year;
+            String name = cursor.getString(1);
+            String nickname = cursor.getString(2);
+            String finisher = cursor.getString(3);
+            entry[0] = name;
+            entry[1] = nickname;
+            entry[2] = finisher;
         }
         db.close();
         return entry;
     }
 
-    public ArrayList<String> getDirector (String directorName){
+    public ArrayList<String> getNickname (String nickName){
         SQLiteDatabase db = getWritableDatabase();
         ArrayList<String> list = new ArrayList<String>();
-        String sql = "select * from MovieTable where director = '"+directorName+"'";
+        String sql = "select * from WrestlerTable where nickname = '"+nickName+"'";
         Cursor cursor = db.rawQuery(sql, null);
         while(cursor.moveToNext()) {
-            String director = cursor.getString(1);
-            list.add(director);
+            String nickname = cursor.getString(1);
+            list.add(nickname);
         }
         db.close();
         return list;
     }
 
-    public void delete (String deleteMovie){
+    public void delete (String deleteWrestler){
         SQLiteDatabase db = getWritableDatabase();
-        String sql = "delete from MovieTable where title = '"+deleteMovie+"'";
+        String sql = "delete from WrestlerTable where name = '"+deleteWrestler+"'";
         db.execSQL(sql);
         db.close();
     }

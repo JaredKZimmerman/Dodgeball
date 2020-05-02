@@ -9,9 +9,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ViewActivity  extends AppCompatActivity{
 
-    private TextView titleView;
-    private TextView directorView;
-    private TextView yearView;
+
+    private TextView nameView;
+    private TextView nicknameView;
+    private TextView finisherView;
 
     @Override
         public void
@@ -19,26 +20,26 @@ public class ViewActivity  extends AppCompatActivity{
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_view);
 
-            titleView = findViewById(R.id.titleView);
-            directorView = findViewById(R.id.directorView);
-            yearView = findViewById(R.id.yearView);
+            nameView = findViewById(R.id.wrestlerView);
+            nicknameView = findViewById(R.id.nicknameView);
+            finisherView = findViewById(R.id.finisherView);
 
             DatabaseManager dbm = new DatabaseManager(this);
             Intent i = getIntent();
-            String title = i.getStringExtra("TITLE");
-            String[] entry = dbm.get(title);
-            titleView.setText(entry[0]);
-            directorView.setText(entry[1]);
-            yearView.setText(entry[2]);
+            String name = i.getStringExtra("NAME");
+            String[] entry = dbm.get(name);
+            nameView.setText(entry[0]);
+            nicknameView.setText(entry[1]);
+            finisherView.setText(entry[2]);
 
     }
 
     public void editPressed(View v){
         Intent i = new Intent(this, AddActivity.class);
         i.putExtra("ADD", false);
-        i.putExtra("TITLE", titleView.getText().toString());
-        i.putExtra("DIRECTOR", directorView.getText().toString());
-        i.putExtra("YEAR", yearView.getText().toString());
+        i.putExtra("NAME", nameView.getText().toString());
+        i.putExtra("NICKNAME", nicknameView.getText().toString());
+        i.putExtra("FINISHING MOVE", finisherView.getText().toString());
         startActivity(i);
     }
 }

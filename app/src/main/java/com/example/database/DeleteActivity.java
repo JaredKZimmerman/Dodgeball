@@ -21,7 +21,7 @@ public class DeleteActivity  extends AppCompatActivity {
 
     }
 
-    public void deleteMovie (View v){
+    public void deleteWrestler (View v){
         String delete = searchBar.getText().toString();
         DatabaseManager dbm = new DatabaseManager(this);
         dbm.delete(delete);

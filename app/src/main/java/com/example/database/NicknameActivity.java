@@ -7,23 +7,23 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class DirectorActivity  extends AppCompatActivity {
+public class NicknameActivity  extends AppCompatActivity {
 
     public EditText searchBar;
 
     @Override
     public void
     onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);setContentView(R.layout.activity_director);
+        super.onCreate(savedInstanceState);setContentView(R.layout.activity_nickname);
 
         searchBar = findViewById(R.id.searchBar);
 
     }
 
     public void searchDB(View v){
-        Intent i = new Intent(this, DirectorViewActivity.class);
-        String director = searchBar.getText().toString();
-        i.putExtra("DIRECTOR", director);
+        Intent i = new Intent(this, WrestlerActivity.class);
+        String nickname = searchBar.getText().toString();
+        i.putExtra("NICKNAME", nickname);
         startActivity(i);
     }
 

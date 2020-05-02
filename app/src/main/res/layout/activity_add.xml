@@ -16,10 +16,10 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Year:"
+        android:text="Finisher:"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/addButton"
-        app:layout_constraintEnd_toStartOf="@+id/directorBox"
+        app:layout_constraintEnd_toStartOf="@+id/nicknameBox"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -34,10 +34,10 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Director:"
+        android:text="Nickname:"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/addButton"
-        app:layout_constraintEnd_toStartOf="@+id/directorBox"
+        app:layout_constraintEnd_toStartOf="@+id/nicknameBox"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -45,27 +45,27 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="163dp"
+        android:layout_height="111dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Title:"
+        android:text="Wrestler Name:"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/titleBox"
+        app:layout_constraintEnd_toStartOf="@+id/wrestlerBox"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.229" />
+        app:layout_constraintVertical_bias="0.042" />
 
     <EditText
-        android:id="@+id/directorBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/nicknameBox"
+        android:layout_width="181dp"
+        android:layout_height="58dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
@@ -81,7 +81,7 @@
         app:layout_constraintVertical_bias="0.553" />
 
     <EditText
-        android:id="@+id/titleBox"
+        android:id="@+id/wrestlerBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -91,33 +91,33 @@
         android:layout_marginRight="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/directorBox"
+        app:layout_constraintBottom_toTopOf="@+id/nicknameBox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.956"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.358" />
+        app:layout_constraintVertical_bias="0.477" />
 
     <Button
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginLeft="160dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:onClick="addPressed"
-        android:text="Add Movie"
+        android:text="Add Wrestler"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.635" />
+        app:layout_constraintVertical_bias="0.665" />
 
     <EditText
-        android:id="@+id/yearBox"
+        android:id="@+id/finisherBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -131,6 +131,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.903"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/directorBox"
+        app:layout_constraintTop_toBottomOf="@+id/nicknameBox"
         app:layout_constraintVertical_bias="0.127" />
 </androidx.constraintlayout.widget.ConstraintLayout>

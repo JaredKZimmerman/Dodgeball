@@ -10,9 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class AddActivity  extends AppCompatActivity {
 
-    private EditText titleBox;
-    private EditText directorBox;
-    private EditText yearBox;
+    private EditText wrestlerBox;
+    private EditText nicknameBox;
+    private EditText finisherBox;
     private Button addButton;
     private boolean add;
 
@@ -22,9 +22,9 @@ public class AddActivity  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
 
-        titleBox = findViewById(R.id.titleBox);
-        directorBox = findViewById(R.id.directorBox);
-        yearBox = findViewById(R.id.yearBox);
+        wrestlerBox = findViewById(R.id.wrestlerBox);
+        nicknameBox = findViewById(R.id.nicknameBox);
+        finisherBox = findViewById(R.id.finisherBox);
         addButton = findViewById(R.id.addButton);
         Intent i = getIntent();
         add = i.getBooleanExtra("ADD", true);
@@ -32,21 +32,21 @@ public class AddActivity  extends AppCompatActivity {
             addButton.setText("ADD");
         } else {
             addButton.setText("EDIT");
-            titleBox.setText(i.getStringExtra("TITLE"));
-            directorBox.setText(i.getStringExtra("DIRECTOR"));
-            yearBox.setText(i.getStringExtra("YEAR"));
+            wrestlerBox.setText(i.getStringExtra("WRESTLER"));
+            nicknameBox.setText(i.getStringExtra("NICKNAME"));
+            finisherBox.setText(i.getStringExtra("FINISHER"));
         }
 
         }
     public void addPressed (View v){
-        String title = titleBox.getText().toString();
-        String director = directorBox.getText().toString();
-        String year = yearBox.getText().toString();
+        String wrestler = wrestlerBox.getText().toString();
+        String nickname = nicknameBox.getText().toString();
+        String finisher = finisherBox.getText().toString();
         DatabaseManager dbm = new DatabaseManager(this);
         if (add)
-            dbm.insert(title, director, year);
+            dbm.insert(wrestler, nickname, finisher);
         else
-            dbm.updateByTitle(title, director, year);
+            dbm.updateByTitle(wrestler, nickname, finisher);
 
         finish();
     }
