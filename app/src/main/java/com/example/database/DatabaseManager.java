@@ -22,20 +22,13 @@ public class DatabaseManager extends SQLiteOpenHelper {
 
     public void insert(String playerName, int pID){
         SQLiteDatabase db = getWritableDatabase();
-        String sql = "insert into WrestlerTable values(";
+        String sql = "insert into PlayerTable values(";
         sql += "null, '"+playerName+"', '"+pID+"')";
 
         db.execSQL(sql);
         db.close();
     }
 
-    /*public void updateByTitle(String name, String PID, String finisher){
-        SQLiteDatabase db = getWritableDatabase();
-        String sql = "update PlayerTable set PID = '"+PID+"'";
-        sql += "where wrestler = '"+name+"'";
-        db.execSQL(sql);
-        db.close();
-    }*/
 
     public ArrayList<String> getNames(){
         ArrayList<String> list = new ArrayList<String>();
@@ -45,6 +38,19 @@ public class DatabaseManager extends SQLiteOpenHelper {
         while(cursor.moveToNext()) {
             String name = cursor.getString(1);
             list.add(name);
+        }
+        db.close();
+        return list;
+    }
+
+    public ArrayList<String> getPID(){
+        ArrayList<String> list = new ArrayList<String>();
+        SQLiteDatabase db = getWritableDatabase();
+        String sql = "select * from PlayerTable";
+        Cursor cursor = db.rawQuery(sql, null);
+        while(cursor.moveToNext()) {
+            String pid = cursor.getString(2);
+            list.add(pid);
         }
         db.close();
         return list;

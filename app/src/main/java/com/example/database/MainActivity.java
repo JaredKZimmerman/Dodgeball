@@ -85,121 +85,115 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addPlayer(View v) {
-        if (nameb1.getText() == "Adam" || idb1.getText() == "1") {
+        if (nameb1.getText().toString() == "Adam" || idb1.getText().toString() == "1") {
             stats1.setText("+4 Power; +0 Accuracy; +0 Agility");
             power = power + 4;
-        } else if (nameb1.getText() == "Charles" || idb1.getText() == "2") {
+        } else if (nameb1.getText().toString() == "Charles" || idb1.getText().toString() == "2") {
             stats1.setText("+3 Power; +1 Accuracy; +0 Agility");
             power = power + 3;
             accuracy = accuracy + 1;
-        } else if (nameb1.getText() == "Dan" || idb1.getText() == "3") {
+        } else if (nameb1.getText().toString() == "Dan" || idb1.getText().toString() == "3") {
             stats1.setText("+3 Power; +0 Accuracy; +1 Agility");
             power = power + 3;
             agility = agility + 1;
-        } else if (nameb1.getText() == "Iori" || idb1.getText() == "4") {
+        } else if (nameb1.getText().toString() == "Iori" || idb1.getText().toString() == "4") {
             stats1.setText("+2 Power; +1 Accuracy; +1 Agility");
             power = power + 2;
             accuracy = accuracy + 1;
             agility = agility + 1;
-        } else if (nameb1.getText() == "James" || idb1.getText() == "5") {
+        } else if (nameb1.getText().toString() == "James" || idb1.getText().toString() == "5") {
             stats1.setText("+1 Power; +2 Accuracy; +1 Agility");
             power = power + 1;
             accuracy = accuracy + 2;
             agility = agility + 1;
-        } else if (nameb1.getText() == "Aleister" || idb1.getText() == "6") {
+        } else if (nameb1.getText().toString() == "Aleister" || idb1.getText().toString() == "6") {
             stats1.setText("+1 Power; +1 Accuracy; +2 Agility");
             power = power + 1;
             accuracy = accuracy + 1;
             agility = agility + 2;
-        } else if (nameb1.getText() == "Miguel" || idb1.getText() == "7") {
+        } else if (nameb1.getText().toString() == "Miguel" || idb1.getText().toString() == "7") {
             stats1.setText("+1 Power; +0 Accuracy; +3 Agility");
             power = power + 1;
             agility = agility + 3;
-        } else if (nameb1.getText() == "Chloe" || idb1.getText() == "8") {
+        } else if (nameb1.getText().toString() == "Chloe" || idb1.getText().toString() == "8") {
             stats1.setText("+0 Power; +1 Accuracy; +3 Agility");
             accuracy = accuracy + 1;
             agility = agility + 3;
-        } else if (nameb1.getText() == "Xia" || idb1.getText() == "9") {
+        } else if (nameb1.getText().toString() == "Xia" || idb1.getText().toString() == "9") {
             stats1.setText("+0 Power; +0 Accuracy; +4 Agility");
             agility = agility + 4;
-        } else {
-            Toast.makeText(this, "Invalid Credentials for Team", Toast.LENGTH_SHORT).show();
-        }
-        if (nameb2.getText() == "Adam" || idb2.getText() == "1") {
+        } else if (nameb2.getText().toString() == "Adam" || idb2.getText().toString() == "1") {
             stats2.setText("+4 Power; +0 Accuracy; +0 Agility");
             power = power + 4;
-        } else if (nameb2.getText() == "Charles" || idb2.getText() == "2") {
+        } else if (nameb2.getText().toString() == "Charles" || idb2.getText().toString() == "2") {
             stats2.setText("+3 Power; +1 Accuracy; +0 Agility");
             power = power + 3;
             accuracy = accuracy + 1;
-        } else if (nameb2.getText() == "Dan" || idb2.getText() == "3") {
+        } else if (nameb2.getText().toString() == "Dan" || idb2.getText().toString() == "3") {
             stats2.setText("+3 Power; +0 Accuracy; +1 Agility");
             power = power + 3;
             agility = agility + 1;
-        } else if (nameb2.getText() == "Iori" || idb2.getText() == "4") {
+        } else if (nameb2.getText().toString() == "Iori" || idb2.getText().toString() == "4") {
             stats2.setText("+2 Power; +1 Accuracy; +1 Agility");
             power = power + 2;
             accuracy = accuracy + 1;
             agility = agility + 1;
-        } else if (nameb2.getText() == "James" || idb2.getText() == "5") {
+        } else if (nameb2.getText().toString() == "James" || idb2.getText().toString() == "5") {
             stats2.setText("+1 Power; +2 Accuracy; +1 Agility");
             power = power + 1;
             accuracy = accuracy + 2;
             agility = agility + 1;
-        } else if (nameb2.getText() == "Aleister" || idb2.getText() == "6") {
+        } else if (nameb2.getText().toString() == "Aleister" || idb2.getText().toString() == "6") {
             stats2.setText("+1 Power; +1 Accuracy; +2 Agility");
             power = power + 1;
             accuracy = accuracy + 1;
             agility = agility + 2;
-        } else if (nameb2.getText() == "Miguel" || idb2.getText() == "7") {
+        } else if (nameb2.getText().toString() == "Miguel" || idb2.getText().toString() == "7") {
             stats2.setText("+1 Power; +0 Accuracy; +3 Agility");
             power = power + 1;
             agility = agility + 3;
-        } else if (nameb2.getText() == "Chloe" || idb2.getText() == "8") {
+        } else if (nameb2.getText().toString() == "Chloe" || idb2.getText().toString() == "8") {
             stats2.setText("+0 Power; +1 Accuracy; +3 Agility");
             accuracy = accuracy + 1;
             agility = agility + 3;
-        } else if (nameb2.getText() == "Xia" || idb2.getText() == "9") {
+        } else if (nameb2.getText().toString() == "Xia" || idb2.getText().toString() == "9") {
             stats2.setText("+0 Power; +0 Accuracy; +4 Agility");
             agility = agility + 4;
-        } else {
-            Toast.makeText(this, "Invalid Credentials for Team", Toast.LENGTH_SHORT).show();
-        }
-        if (nameb3.getText() == "Adam" || idb3.getText() == "1") {
+        } else if (nameb3.getText().toString() == "Adam" || idb3.getText().toString() == "1") {
             stats3.setText("+4 Power; +0 Accuracy; +0 Agility");
             power = power + 4;
-        } else if (nameb3.getText() == "Charles" || idb3.getText() == "2") {
+        } else if (nameb3.getText().toString() == "Charles" || idb3.getText().toString() == "2") {
             stats3.setText("+3 Power; +1 Accuracy; +0 Agility");
             power = power + 3;
             accuracy = accuracy + 1;
-        } else if (nameb3.getText() == "Dan" || idb3.getText() == "3") {
+        } else if (nameb3.getText().toString() == "Dan" || idb3.getText().toString() == "3") {
             stats3.setText("+3 Power; +0 Accuracy; +1 Agility");
             power = power + 3;
             agility = agility + 1;
-        } else if (nameb3.getText() == "Iori" || idb3.getText() == "4") {
+        } else if (nameb3.getText().toString() == "Iori" || idb3.getText().toString() == "4") {
             stats3.setText("+2 Power; +1 Accuracy; +1 Agility");
             power = power + 2;
             accuracy = accuracy + 1;
             agility = agility + 1;
-        } else if (nameb3.getText() == "James" || idb3.getText() == "5") {
+        } else if (nameb3.getText().toString() == "James" || idb3.getText().toString() == "5") {
             stats3.setText("+1 Power; +2 Accuracy; +1 Agility");
             power = power + 1;
             accuracy = accuracy + 2;
             agility = agility + 1;
-        } else if (nameb3.getText() == "Aleister" || idb3.getText() == "6") {
+        } else if (nameb3.getText().toString() == "Aleister" || idb3.getText().toString() == "6") {
             stats3.setText("+1 Power; +1 Accuracy; +2 Agility");
             power = power + 1;
             accuracy = accuracy + 1;
             agility = agility + 2;
-        } else if (nameb3.getText() == "Miguel" || idb3.getText() == "7") {
+        } else if (nameb3.getText().toString() == "Miguel" || idb3.getText().toString() == "7") {
             stats3.setText("+1 Power; +0 Accuracy; +3 Agility");
             power = power + 1;
             agility = agility + 3;
-        } else if (nameb3.getText() == "Chloe" || idb3.getText() == "8") {
+        } else if (nameb3.getText().toString() == "Chloe" || idb3.getText().toString() == "8") {
             stats3.setText("+0 Power; +1 Accuracy; +3 Agility");
             accuracy = accuracy + 1;
             agility = agility + 3;
-        } else if (nameb3.getText() == "Xia" || idb3.getText() == "9") {
+        } else if (nameb3.getText().toString() == "Xia" || idb3.getText().toString() == "9") {
             stats3.setText("+0 Power; +0 Accuracy; +4 Agility");
             agility = agility + 4;
         } else {
@@ -209,25 +203,27 @@ public class MainActivity extends AppCompatActivity {
 
     public void startGame(View v) {
         if (played == 1) {
-            playButton.setText("Add");
+            playButton.setText("");
             curr1.setText("");
             curr2.setText("");
             curr3.setText("");
-            nameb1.setText("Player Name");
-            nameb2.setText("Player Name");
-            nameb3.setText("Player Name");
-            idb1.setText("ID");
-            idb2.setText("ID");
-            idb3.setText("ID");
-            stats1.setText("No Player Selected");
-            stats2.setText("No Player Selected");
-            stats3.setText("No Player Selected");
+            nameb1.setText("");
+            nameb2.setText("");
+            nameb3.setText("");
+            idb1.setText("");
+            idb2.setText("");
+            idb3.setText("");
+            stats1.setText("");
+            stats2.setText("");
+            stats3.setText("");
             userScoreView.setText("");
             userScore.setText("");
             oppoScoreView.setText("");
             oppoScore.setText("");
+            played = 0;
         } else {
-            if (idb1.getText() == idb2.getText() || idb2.getText() == idb3.getText() || idb1.getText() == idb3.getText()) {
+            if (idb1.getText() == idb2.getText() || idb2.getText() == idb3.getText() || idb1.getText() == idb3.getText() ||
+                    nameb1.getText() == nameb2.getText() || nameb2.getText() == nameb3.getText() || nameb1.getText() == nameb3.getText()) {
                 Toast.makeText(this, "Cannot Have Same Player Twice", Toast.LENGTH_SHORT).show();
             } else {
                 playButton.setText("Reset");
@@ -302,6 +298,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     result.setText("Tie!!!");
                 }
+                played = 1;
             }
         }
 

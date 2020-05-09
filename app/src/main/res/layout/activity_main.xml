@@ -128,6 +128,7 @@
                 android:layout_width="141dp"
                 android:layout_height="56dp"
                 android:ems="10"
+                android:freezesText="false"
                 android:inputType="textPersonName"
                 android:text="Player Name:" />
         </TableRow>
