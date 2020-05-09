@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#AD3C6EEE"
+    android:background="#ADEEEBB7"
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -17,35 +17,17 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:onClick="addWrestler"
+        android:onClick="addPlayer"
         android:text="Add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.179" />
+        app:layout_constraintVertical_bias="0.448" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:onClick="viewWrestler"
-        android:text="View"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.136" />
-
-    <Button
-        android:id="@+id/button4"
+        android:id="@+id/viewButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -54,16 +36,17 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:onClick="addNickname"
-        android:text="Search by Nickname"
+        android:onClick="viewPlayers"
+        android:text="View Players"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.029"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.194" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.376" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/rulesButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -72,33 +55,148 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:onClick="deleteWrestler"
-        android:text="Delete"
+        android:onClick="showRules"
+        android:text="Rules"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:layout_constraintVertical_bias="0.353" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.157" />
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="323dp"
-        android:layout_height="102dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="#8CAC00"
+        android:background="#008CAC00"
         android:gravity="center_horizontal|center_vertical"
         android:orientation="horizontal"
-        android:text="Wrestlers DB!"
+        android:text="DODGEBALL"
         android:textAllCaps="true"
-        android:textColor="#FFFFFF"
+        android:textColor="#FF5722"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/addButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <TableLayout
+        android:layout_width="410dp"
+        android:layout_height="348dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/nameb1"
+                android:layout_width="127dp"
+                android:layout_height="51dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Player Name:" />
+
+            <EditText
+                android:id="@+id/nameb2"
+                android:layout_width="134dp"
+                android:layout_height="52dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Player Name:" />
+
+            <EditText
+                android:id="@+id/nameb3"
+                android:layout_width="141dp"
+                android:layout_height="56dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Player Name:" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/idb1"
+                android:layout_width="83dp"
+                android:layout_height="51dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="ID:" />
+
+            <EditText
+                android:id="@+id/idb2"
+                android:layout_width="112dp"
+                android:layout_height="51dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="ID:" />
+
+            <EditText
+                android:id="@+id/idb3"
+                android:layout_width="117dp"
+                android:layout_height="51dp"
+                android:ems="10"
+                android:inputType="number"
+                android:text="ID:" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/stats1"
+                android:layout_width="wrap_content"
+                android:layout_height="247dp"
+                android:gravity="center"
+                android:text="No Player Selected" />
+
+            <TextView
+                android:id="@+id/stats2"
+                android:layout_width="wrap_content"
+                android:layout_height="249dp"
+                android:gravity="center"
+                android:text="No Player Selected" />
+
+            <TextView
+                android:id="@+id/stats3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="No Player Selected" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startGame"
+        android:text="Play!"
+        tools:layout_editor_absoluteX="282dp"
+        tools:layout_editor_absoluteY="259dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

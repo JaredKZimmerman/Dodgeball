@@ -19,9 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ViewActivity" />
-        <activity android:name=".AddActivity" />
         <activity android:name=".DirectorActivity" />
-        <activity android:name=".DeleteActivity" />
     </application>
 
 </manifest>

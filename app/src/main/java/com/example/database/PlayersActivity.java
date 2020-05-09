@@ -11,14 +11,14 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class WrestlerActivity extends AppCompatActivity {
+public class PlayersActivity extends AppCompatActivity {
 
     private ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_wrestler_view);
+        setContentView(R.layout.activity_player_view);
 
         scrollView = findViewById(R.id.scrollView);
         scrollView.removeAllViewsInLayout();
@@ -31,18 +31,17 @@ public class WrestlerActivity extends AppCompatActivity {
             TextView text = new TextView(this);
             text.setText(name);
             text.setTextSize(40);
-            text.setClickable(true);
+            /*text.setClickable(true);
             text.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View view){
                         Intent i = new Intent(getApplicationContext(), ViewActivity.class);
                         i.putExtra("Name", ((TextView) view).getText().toString());
                         startActivity(i);
-                    }
-        });
-            grid.addView(text);
+                    }*/
+        };
+           // grid.addView(text);
         }
-        scrollView.addView(grid);
+        //scrollView.addView(grid);
 
-    }
 }
