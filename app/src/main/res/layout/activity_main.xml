@@ -112,16 +112,16 @@
                 android:layout_width="127dp"
                 android:layout_height="51dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Player Name:" />
+                android:hint="Player Name:"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:id="@+id/nameb2"
                 android:layout_width="134dp"
                 android:layout_height="52dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Player Name:" />
+                android:hint="Player Name:"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:id="@+id/nameb3"
@@ -129,8 +129,8 @@
                 android:layout_height="56dp"
                 android:ems="10"
                 android:freezesText="false"
-                android:inputType="textPersonName"
-                android:text="Player Name:" />
+                android:hint="Player Name:"
+                android:inputType="textPersonName" />
         </TableRow>
 
         <TableRow
@@ -142,24 +142,24 @@
                 android:layout_width="83dp"
                 android:layout_height="51dp"
                 android:ems="10"
-                android:inputType="number"
-                android:text="ID:" />
+                android:hint="ID:"
+                android:inputType="number" />
 
             <EditText
                 android:id="@+id/idb2"
                 android:layout_width="112dp"
                 android:layout_height="51dp"
                 android:ems="10"
-                android:inputType="number"
-                android:text="ID:" />
+                android:hint="ID:"
+                android:inputType="number" />
 
             <EditText
                 android:id="@+id/idb3"
                 android:layout_width="117dp"
                 android:layout_height="51dp"
                 android:ems="10"
-                android:inputType="number"
-                android:text="ID:" />
+                android:hint="ID:"
+                android:inputType="number" />
         </TableRow>
 
         <TableRow
@@ -170,7 +170,7 @@
                 android:id="@+id/stats1"
                 android:layout_width="132dp"
                 android:layout_height="247dp"
-                android:gravity="center"
+                android:gravity="center_horizontal"
                 android:text="No Player Selected"
                 android:textSize="30sp" />
 
@@ -178,7 +178,7 @@
                 android:id="@+id/stats2"
                 android:layout_width="137dp"
                 android:layout_height="249dp"
-                android:gravity="center"
+                android:gravity="center_horizontal"
                 android:text="No Player Selected"
                 android:textSize="30sp" />
 
@@ -186,7 +186,7 @@
                 android:id="@+id/stats3"
                 android:layout_width="133dp"
                 android:layout_height="match_parent"
-                android:gravity="center"
+                android:gravity="center_horizontal"
                 android:text="No Player Selected"
                 android:textSize="30sp" />
 
