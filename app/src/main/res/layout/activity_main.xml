@@ -17,6 +17,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:background="#B7C1FC"
         android:onClick="addPlayer"
         android:text="Add"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,6 +37,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:background="#C0C8FA"
         android:onClick="viewPlayers"
         android:text="View Players"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,7 +45,7 @@
         app:layout_constraintHorizontal_bias="0.029"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.376" />
+        app:layout_constraintVertical_bias="0.157" />
 
     <Button
         android:id="@+id/rulesButton"
@@ -55,6 +57,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:background="#B0BCFD"
         android:onClick="showRules"
         android:text="Rules"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -76,7 +79,7 @@
         android:background="#008CAC00"
         android:gravity="center_horizontal|center_vertical"
         android:orientation="horizontal"
-        android:text="DODGEBALL"
+        android:text="THE DODGEFATHER'S TEST"
         android:textAllCaps="true"
         android:textColor="#FF5722"
         android:textSize="36sp"
@@ -88,6 +91,7 @@
         app:layout_constraintVertical_bias="0.032" />
 
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="410dp"
         android:layout_height="348dp"
         android:layout_marginStart="8dp"
@@ -163,24 +167,28 @@
 
             <TextView
                 android:id="@+id/stats1"
-                android:layout_width="wrap_content"
+                android:layout_width="132dp"
                 android:layout_height="247dp"
                 android:gravity="center"
-                android:text="No Player Selected" />
+                android:text="No Player Selected"
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/stats2"
-                android:layout_width="wrap_content"
+                android:layout_width="137dp"
                 android:layout_height="249dp"
                 android:gravity="center"
-                android:text="No Player Selected" />
+                android:text="No Player Selected"
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/stats3"
-                android:layout_width="wrap_content"
+                android:layout_width="133dp"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="No Player Selected" />
+                android:text="No Player Selected"
+                android:textSize="30sp" />
+
         </TableRow>
 
         <TableRow
@@ -191,12 +199,143 @@
     </TableLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/playButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#C0C9FA"
         android:onClick="startGame"
         android:text="Play!"
-        tools:layout_editor_absoluteX="282dp"
-        tools:layout_editor_absoluteY="259dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.147" />
+
+    <LinearLayout
+        android:layout_width="142dp"
+        android:layout_height="201dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31">
+
+        <TextView
+            android:id="@+id/curr1"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/curr2"
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/curr3"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/userScoreView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="#020202"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.917"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/userScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.282" />
+
+    <TextView
+        android:id="@+id/oppoScoreView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.366" />
+
+    <TextView
+        android:id="@+id/oppoScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.438" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="102dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.287" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
